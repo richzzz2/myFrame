@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.richz.frame.mapper.IssueMapper">
+
+    <resultMap id="BaseResultMap" type="com.richz.frame.entity.Issue">
+            <id property="id" column="id" jdbcType="VARCHAR"/>
+            <result property="lineId" column="line_id" jdbcType="VARCHAR"/>
+            <result property="cate1" column="cate_1" jdbcType="VARCHAR"/>
+            <result property="cate2" column="cate_2" jdbcType="VARCHAR"/>
+            <result property="sourceType" column="source_type" jdbcType="VARCHAR"/>
+            <result property="sourceId" column="source_id" jdbcType="VARCHAR"/>
+            <result property="issueDesc" column="issue_desc" jdbcType="VARCHAR"/>
+            <result property="content" column="content" jdbcType="VARCHAR"/>
+            <result property="solutionType" column="solution_type" jdbcType="INTEGER"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="examineStatus" column="examine_status" jdbcType="INTEGER"/>
+            <result property="examineTime" column="examine_time" jdbcType="TIMESTAMP"/>
+            <result property="issueExplain" column="issue_explain" jdbcType="VARCHAR"/>
+            <result property="fileId" column="file_id" jdbcType="VARCHAR"/>
+            <result property="issueDevice" column="issue_device" jdbcType="VARCHAR"/>
+            <result property="isFeedback" column="is_feedback" jdbcType="VARCHAR"/>
+            <result property="suorceProblemType" column="suorce_problem_type" jdbcType="VARCHAR"/>
+            <result property="commitIssue" column="commit_issue" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,line_id,cate_1,
+        cate_2,source_type,source_id,
+        issue_desc,content,solution_type,
+        update_time,create_time,examine_status,
+        examine_time,issue_explain,file_id,
+        issue_device,is_feedback,suorce_problem_type,
+        commit_issue
+    </sql>
+</mapper>
