@@ -1,20 +1,17 @@
 package com.richz.frame.entity.vo;
 
 import com.richz.frame.constant.RspCode;
-
-
+import lombok.Data;
+import lombok.experimental.Accessors;
+@Data
+@Accessors(chain = true)
 public class ResponseData  {
 
     private String result_code;
     private String msg;
     private Object data;
 
-    public String getResult_code(){return result_code;}
-    public void   setResult_code(){this.result_code = result_code;}
-    public String getMsg(){return msg;}
-    public void   setMsg(){this.msg=msg;}
-    public Object getData(){return data;}
-    public void   setData(){this.data= data;}
+
     public ResponseData() {
 
     }

@@ -44,7 +44,12 @@
         <appender-ref ref="DEBUG_FILE"/>
         <appender-ref ref="CONSOLE"/>
     </logger>
-
+    <!-- 添加 P6Spy 日志配置 -->
+    <logger name="p6spy" level="DEBUG" additivity="false">
+        <appender-ref ref="DEBUG_FILE"/>
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+    <Logger name="org.owasp.esapi" level="ERROR" />
     <!-- 根日志级别设置 -->
     <root level="DEBUG">
         <appender-ref ref="DEBUG_FILE"/>
